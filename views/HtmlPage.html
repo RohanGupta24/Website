@@ -1,0 +1,769 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" ng-app="personal" class="ng-scope">
+<head>
+    <style type="text/css">
+        @charset "UTF-8";
+        /*[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }*/
+        .ng-hide.ng-hide-animate {
+            display: none !important;
+        }
+        ng\:form {
+            display: block;
+        }
+        .ng-animate-shim {
+            visibility: hidden;
+        }
+        .ng-anchor {
+            position: absolute;
+        }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Rohan Gupta - Software Developer</title>
+    <meta name="description=" content="Hi! I'm Rohan, a freshman at Purdue University majoring in Computer Science.">
+    <meta name="keywords" content="Rohan">
+    <link rel="shortcut icon" href="images/fav.png" type="image/x-icon">
+    <meta property="og:title" content="Rohan Gupta">
+    <meta property="og:url" content="http://localhost:3000">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/preview.jpg">
+    <meta property="og:description" content="Hi! I'm Rohan, a freshman at Purdue University majoring in Computer Science.">
+    <meta property="og:site_name" content="Rohan Gupta">
+    <meta name="theme-color" content="#0680cc">
+    <meta http-equiv="Cache-control" content="no">
+
+
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400|Roboto+Slab:100,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/fonts.css" rel="stylesheet" type="text/css">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/pdfobject.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script><!--   <script type="text/javascript" src="js/SmoothScroll.js">-->
+
+    <script src="js/wow.min.js" type="text/javascript"></script>
+    <script src="js/typed.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        new WOW().init();
+    //]]>
+    </script>
+    <script type="text/javascript">
+        //<![CDATA[
+        $(window).load(function () {
+            setTimeout(
+                function () {
+                    //do something special
+                    $(".loader").fadeOut("fast");
+                    $("#loading").fadeOut("fast");
+                    $("#mainbody").fadeIn("slow");
+                    $(".desc").fadeIn("slow");
+                    //$("body").fadeIn("slow");
+                    $(".whoiam").typed({
+                        strings: ["a technology enthusiast.", "a problem solver.", "a creative thinker.", "a software developer."],
+                        typeSpeed: 30,
+                        startDelay: 1800,
+                        typeSpeed: 80,
+                        backSpeed: 70,
+                        backDelay: 700,
+                        showCursor: true,
+                        cursorChar: "",
+                        loop: true
+                    });
+                    //var options = {
+                    //    fallbackLink: '<p>This browser does not support inline PDFs. Please download the PDF to view it: <a href="https://www.dropbox.com/s/b9o2q9xkxzzwfji/GuptaCSResume_Summer2017.pdf?dl=0">Download PDF</a></p>'
+                    //};
+                    //PDFObject.embed("https://www.dropbox.com/s/b9o2q9xkxzzwfji/GuptaCSResume_Summer2017.pdf?dl=0", "#resume", options);
+                }, 10);
+        });
+    </script>
+</head>
+
+<body ng-controller="Controller as site" class="ng-scope" style="overflow: auto;">
+    <div id="loading" style="display: none;"></div>
+    <div class="loader" style="display: none;">Loading</div>
+
+
+    <div id="mainbody" ng-controller="projectController as project" class="ng-scope" style=s"display: block;">
+        <div class="splash" style="top: 0px; opacity: 1; animation: huehuehue 30s linear infinite;">
+            <div class="movethis" style="display: table; height: 100%; width:100%; text-align:center; overflow: hidden;">
+                <div style="display: table-cell; vertical-align: middle;">
+                    <h2 class="wow fadeInDown animated" ng-show="!showResume" style="visibility: visible; animation-name: fadeInDown;"></h2><br>
+
+                    <h1 class="wow fadeInDown animated" ng-show="!showResume" style="visibility: visible; animation-name: fadeInDown;">Rohan Gupta</h1><br>
+
+                    <div class="wow fadeInDown desc animated" style="z-index: 999; position: relative; color: rgb(255, 0, 0); visibility: visible; animation-name: fadeInDown;" ng-show="!showResume">
+                        <span class="wow fadeInDown splashdtext animated" style="visibility: visible; animation-name: fadeInDown;">I'm</span> <span id="typed" class="wow fadeInDown whoiam splashdtext animated" style="visibility: visible; animation-name: fadeInDown;"></span><span class="typed-cursor">|</span>
+                    </div><br><br>
+                    <div>
+                   <a href="https://www.dropbox.com/s/b9o2q9xkxzzwfji/GuptaCSResume_Summer2017.pdf?dl=0"><input type="submit" value="Resume" class="wow fadeIn resume animated" /></a>
+                    </div>
+                    <!--<div ng-show="showResume" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';" class="ng-hide">
+                        <div class="ng-modal-overlay" ng-click="showResume=false"></div>
+                        <div class="ng-modal-dialog resume-viewer pdfobject-container" id="resume"></div>
+                        <div class="ui-buttons ng-modal-close" ng-click="showResume=false" style="z-index: 1;">
+                            <i class="icon ion-ios-close-empty"></i>
+                        </div>
+                    </div>-->
+
+                    <div id="social" class="wow fadeInUp animated" ng-show="!showResume" style="visibility: visible; animation-name: fadeInUp;">
+                        <a href="http://github.com/RohanGupta24" class="github"><i class="icon ion-social-github"></i></a>
+                        <a href="https://www.linkedin.com/in/rohan-g-69907b113/" class="linkedin"><i class="icon ion-social-linkedin"></i></a>
+                        <a href="https://medium.com/@rogupster" class="medium"><i class="fa fa-medium"></i></a>
+                        <a href="mailto:gupta326@purdue.edu" class="mail"><i class="icon ion-android-mail"></i></a>
+                    </div>
+                </div>
+            </div><br>
+
+            <!--<div class="splash-img"></div>
+            <div class="splash-img-blur"></div>-->
+        </div>
+
+        <section class="wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
+            <h1>About</h1>
+
+            <p>Hi! I'm Rohan, a freshman at Purdue University majoring in Computer Science. I'm a technology enthusiast ready to solve the world's problems through the most innovative software. I'm particularly interested in machine learning and data analytics, but I am willing to explore other realms of programming. Check out my Github for the types of programming projects I have done both inside and outside the classroom.</p>
+        </section>
+
+        <section>
+            <h1>Personal Details</h1>
+        </section>
+
+        <div class="pnav">
+            <section class="pnavbtns"><input type="submit" value="Inspiration" ng-class="{ activeBt:project.isSet(0) }" ng-click="eatme=false; loveme=false; hugme=false; kissme=false; laughme=false; showme=true" style="width: 100% !important" class="activeBt"></section>
+
+            <section class="pnavbtns"><input type="submit" value="Work Experience" ng-class="{ activeBt:project.isSet(1) }" ng-click="showme=false; loveme=false; hugme=false; kissme=false; laughme=false; eatme=true" style="width: 100% !important"></section>
+
+            <section class="pnavbtns"><input type="submit" value="Personal Projects" ng-class="{ activeBt:project.isSet(2) }" ng-click="showme=false; eatme=false; hugme=false; kissme=false; laughme=false; loveme=true" style="width: 100% !important"></section>
+
+            <section class="pnavbtns"><input type="submit" value="Hackathon Projects" ng-class="{ activeBt:project.isSet(3) }" ng-click="showme=false; eatme=false; loveme=false; kissme=false; laughme=false; hugme=true" style="width: 100% !important"></section>
+
+            <section class="pnavbtns"><input type="submit" value="Courses" ng-class="{ activeBt:project.isSet(4) }" ng-click="showme=false; eatme=false; loveme=false; hugme=false; laughme=false; kissme=true" style="width: 100% !important"></section>
+
+            <section class="pnavbtns"><input type="submit" value="Clubs and Organizations" ng-class="{ activeBt:project.isSet(5) }" ng-click="eatme=false; loveme=false; hugme=false; laughme=false; kissme=false; laughme=true" style="width: 100% !important"></section>
+        </div>        
+
+        <div class="projects">
+             <p ng-show="showme">My very first programming inspiration came from a game design course at DigiPen Institute of Technology. Using C# and Unity, I was able to create a simple, yet entertaining game with just a few lines of code. My interest in programming continued the next summer when I took an Introduction to Object-Oriented Programming course at University of Washington.</p>
+             <p ng-show="eatme">My first internship opportunity was with UPS. I learned about agile development and the collaborative software developing environment. I participated in pair programming and helped develop an Android app that automated the process of loading and unloading packages. As a result of my contributions to this project, I was able to learn more about different software platforms, such as Visual Studio, SQL Server Management Studio, Xamarin, Couchbase, and Openshift. My internship gave me the opportunity to use MVC architecture and to build a Web Service that connected both the Native and web app. I also learned how to manage a database in SQL by creating stored procedures. I was able to successfully create a webpage using HTML, CSS, and Javascript that displayed random pieces of data from the database using graphs and charts from D3.js. Some of the languages used were C#, Java, Python, SQL, XAML, HTML, CSS, and Javascript</p>
+             <p ng-show="loveme">During my free time, I spend a lot of time exploring the areas of machine learning and data analytics as it relates to computer science. I created a lot of small programs using R and Python, and made a couple of Android and iOS apps this past summer.</p>
+             <p ng-show="hugme">I have participated in several hackathons and was able to complete a few projects. One of them is called Prescription Merge Conflict that detected the drug prescription that would conflict with a patient's health. Another projects allows teachers to share documents instantly on students' technological devices without hassle. </p>
+             <p ng-show="kissme">Some of the courses I have taken thus far include Introduction to Object-Oriented Programming, C Programming, Foundations of Computer Science, and Introduction to Game Design. I will be taking Computer Architecture, Data Structures and Algorithms, and Introduction to Web Development.</p>
+             <p ng-show="laughme">Some of the clubs that I am participating in include CS Undergraduate Student Board, Purdue Hackers, Hello World, SIGAI, SIGAPPS, and IEEE ROV.</p>
+
+
+        </div>
+
+                <section class="wow fadeIn" data-wow-offset="100" style="visibility: hidden; animation-name: none;">
+                    <h1>Contact</h1>
+                    <p>Complete the form below to message me about cool programming projects or opportunities! </p>
+                    <section style="text-align:left;">
+                        <form novalidate="" ng-controller="formController as formCntrl" name="emailForm" ng-submit="formCntrl.submitForm()" class="ng-pristine ng-scope ng-invalid ng-invalid-required ng-valid-email">
+                            <input class="cform wow fadeIn ng-pristine ng-untouched ng-invalid ng-invalid-required" type="text" placeholder="Name:" name="name" ng-model="email.name" required="" style="visibility: hidden; animation-name: none;">
+                            <input class="cform wow fadeIn ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required" type="email" placeholder="Email:" name="email" ng-model="email.email" required="" style="visibility: hidden; animation-name: none;">
+                            <textarea class="cform wow fadeIn ng-pristine ng-untouched ng-valid" name="body" placeholder="Message:" style="width: 90%; height: 200px; font-size: 16px; visibility: hidden; animation-name: none;" ng-model="email.body"></textarea>
+                            <p style="font-size: 1em; margin: 1em;" ng-show="emailForm.$invalid &amp;&amp; !emailForm.$pristine" class="help-block ng-hide">Form is incomplete.</p>
+                            <input type="submit" class="wow fadeIn" value="Submit" name="submit" style="margin: 15px; visibility: hidden; animation-name: none;" ng-disabled="!emailForm.$valid" disabled="disabled">
+                            <p style="font-size: 1em; margin: 1em;" ng-show="success" class="help-block ng-hide">Thank you for messaging me. Expect a response in two to three days.</p>
+                        </form>
+
+                        <p class="hidden" style="margin:15px;"></p>
+                    </section>
+                    <!--<p class="credits">Background by <a href="http://levelofambiguity.tumblr.com/">Marcelo Quinan</a></p>-->
+                </section>
+
+                <div class="projects">
+                    <!-- ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><p>My name is Rohan</p></a>
+                            .j
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(4) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(4) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><img class="resize_fit_center" height="200px" ng-src="images/glasshalfempty.jpg" src="images/glasshalfempty.jpg"></a>
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(2) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><img class="resize_fit_center" height="200px" ng-src="images/webassign.jpg" src="images/webassign.jpg"></a>
+                            .j
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(4) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><img class="resize_fit_center" height="200px" ng-src="images/counslme.jpg" src="images/counslme.jpg"></a>
+                            pg
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(4) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><img class="resize_fit_center" height="200px" ng-src="images/celebfinder.jpg" src="images/celebfinder.jpg"></a>
+                            nd
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(2) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><img class="resize_fit_center" height="200px" ng-src="https://i.giphy.com/dkzqLQMDGEzks.gif" src="https://i.giphy.com/dkzqLQMDGEzks.gif"></a>
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(4) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><img class="resize_fit_center" height="200px" ng-src="images/vgrep.jpg" src="images/vgrep.jpg"></a>
+                            a>
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(4) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><img class="resize_fit_center" height="200px" ng-src="images/spexy.png" src="images/spexy.png"></a>
+                            a>
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(4) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><img class="resize_fit_center" height="200px" ng-src="images/rexthor.jpg" src="images/rexthor.jpg"></a>
+                            ">
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(2) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><img class="resize_fit_center" height="200px" ng-src="images/battlepedia_feature.jpg" src="images/battlepedia_feature.jpg"></a>
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(1) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><img class="resize_fit_center" height="200px" ng-src="images/gameskart.png" src="images/gameskart.png"></a>
+                            .p
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(1) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><img class="resize_fit_center" height="200px" ng-src="images/decrypt.jpg" src="images/decrypt.jpg"></a>
+                            ">
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(3) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><img class="resize_fit_center" height="200px" ng-src="images/cyncapp.png" src="images/cyncapp.png"></a>
+                            ">
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(2) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><img class="resize_fit_center" height="200px" ng-src="images/ldc.jpg" src="images/ldc.jpg"></a>
+                            </d
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(3) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><img class="resize_fit_center" height="200px" ng-src="images/cyntax.jpg" src="images/cyntax.jpg"></a>
+                            </
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(3) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><img class="resize_fit_center" height="200px" ng-src="images/cypher.png" src="images/cypher.png"></a>
+                            </
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(3) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><img class="resize_fit_center" height="200px" ng-src="images/decypher.png" src="images/decypher.png"></a>
+                            ng
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(3) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><img class="resize_fit_center" height="200px" ng-src="images/cync.png" src="images/cync.png"></a>
+
+
+                            <
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects --><div ng-repeat="projectbox in site.projects" class="projectbox ng-scope" ng-show="project.isSet(1) || project.isSet(0)">
+                        <!--<section class="wow fadeIn" ng-show="project.isSet({{projectbox.type}}) || project.isSet(0)">
+                        <h2 class="wow fadeIn" data-wow-offset="100">{{projectbox.title}}</h2>-->
+
+                        <div class="container wow fadeIn" style="visibility: hidden; animation-name: none;">
+                            <a ng-click="project.setDetail(projectbox.id)"><img class="resize_fit_center" height="200px" ng-src="images/cashback.jpg" src="images/cashback.jpg"></a>
+                            pg
+                        </div>
+                    </div><!-- end ngRepeat: projectbox in site.projects -->
+                    <h1 ng-value="site.projects.length" class="ng-binding" value="20"></h1>
+
+                    <div class="ng-modal-overlay ng-hide" ng-show="project.detail != 0" ng-click="project.detail=0"></div>
+
+
+                    <!-- ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox20" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">ItineratR - HackIllinois</h2>
+                                </center>
+
+                                <a href="https://devpost.com/software/itenaratr" target="_blank"><img class="modal-image" ng-src="images/itineratr.jpg" src="images/itineratr.jpg"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="https://devpost.com/software/itenaratr">ItineratR</a> is a website which plans the perfect vacation from you with just your budget and prospective dates. It calculates the possible destinations and upon choosing one generates the whole itenary for the place. I designed and developed the whole front-end with Angular and Material Design Components. I also used Google Maps API to plot data on the maps, and Google Maps Geocoding API to get coordinates from the data.</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox19" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">SinLess - BoilerMake IV</h2>
+                                </center>
+
+                                <a href="https://devpost.com/software/sinless" target="_blank"><img class="modal-image" ng-src="images/sinless.jpg" src="images/sinless.jpg"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="https://devpost.com/software/glass-half-empty">SinLess</a> makes you a better person by punishing you when not doing well, rewarding otherwise. I worked solely on the Android app, implementing the SMS check for swearing, getting number of steps from built-in pedometer and designing the interface. SinLess won as one of the Top 10 hacks at BoilerMake IV, official hackathon of Purdue University.</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox18" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">Glass Half-Empty - WildHacks</h2>
+                                </center>
+
+                                <a href="https://devpost.com/software/glass-half-empty" target="_blank"><img class="modal-image" ng-src="images/glasshalfempty.jpg" src="images/glasshalfempty.jpg"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="https://devpost.com/software/glass-half-empty">Glass Half-Empty</a> is a funky web app which uses custom Machine Learning model to detect if the glass of water is full and if the water is contaminated. I designed the whole front-end of the app in AngularJS, contributed to the server written in Node.JS and trained the Machine Learning model with Clarif.ai API.</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox17" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">Google Calendar for WebAssign</h2>
+                                </center>
+
+                                <a href="https://chrome.google.com/webstore/detail/google-calendar-for-webas/pcfiojkfafnendmgmdpjedkdopdaaigh" target="_blank"><img class="modal-image" ng-src="images/webassign.jpg" src="images/webassign.jpg"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="https://chrome.google.com/webstore/detail/google-calendar-for-webas/pcfiojkfafnendmgmdpjedkdopdaaigh">Google Calendar for WebAssign</a> is a Chrome extension which adds URLs to add assignments, homeworks and tests on WebAssign to Google Calendar.</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox16" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">Counsl.me - WildHacks</h2>
+                                </center>
+
+                                <a href="https://devpost.com/software/counslr-me" target="_blank"><img class="modal-image" ng-src="images/counslme.jpg" src="images/counslme.jpg"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="https://devpost.com/software/counslr-me">Counsl.me</a> is a location-based web service providing free online counseling sessions for mental health. It won the prize for "#HackHarrasment" for Best Hack against online harassment at <a target="_blank" href="https://archhacks.io">ArchHacks</a>, official hackathon of Washington University in St. Louis.</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox15" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">CelebFinder - HelloWorld</h2>
+                                </center>
+
+                                <a href="https://devpost.com/software/celebfinder" target="_blank"><img class="modal-image" ng-src="images/celebfinder.jpg" src="images/celebfinder.jpg"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="https://devpost.com/software/celebfinder">CelebFinder</a> is Chrome browser extension which spots and recognizes any celebrity on screen with Microsoft's facial recognition API and displays his/her information from WikiPedia. It won the prize for "Best Web App" at <a target="_blank" href="http://helloworld.purduehackers.com">HelloWorld</a> hackathon.</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox14" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">2016 Election Visualizer</h2>
+                                </center>
+
+                                <a href="https://electionvisualizer.com" target="_blank"><img class="modal-image" ng-src="https://i.giphy.com/dkzqLQMDGEzks.gif" src="https://i.giphy.com/dkzqLQMDGEzks.gif"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="https://electionvisualizer.com">2016 Election Visualizer</a> is realtime visualization of people tweeting about Donald Trump and/or Hillary Clinton around the world. The line height is proportional to the tweeting user's followers, and hence the tweet's reach. Try it live on <a target="_blank" href="http://electionvisualizer.com">electionvisualizer.com</a>!</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox13" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">VGrep - MHacks</h2>
+                                </center>
+
+                                <a href="https://devpost.com/software/vgrep" target="_blank"><img class="modal-image" ng-src="images/vgrep.jpg" src="images/vgrep.jpg"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="https://devpost.com/software/vgrep">VGrep</a> is an Android app which automatically generates notes from a video lecture. It uses Deepgram API to get audio transcripts and then uses Machine Learning algorithms to determine the important points in the lecture. The Android app allows users to jump to the important points in an intuitive UI.</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox12" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">Spexy - HackGT</h2>
+                                </center>
+
+                                <a href="https://devpost.com/software/spexy" target="_blank"><img class="modal-image" ng-src="images/spexy.png" src="images/spexy.png"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="https://devpost.com/software/spexy">Spexy</a> is a remote monitoring and task management system for PCs and servers. It allows users to remotely check CPU Usage, disk usage, RAM usage and control process remotely from the web app. The PC client app written in Python works on both Windows and Linux.</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox11" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">Rexthor (beta) - HackMIT</h2>
+                                </center>
+
+                                <a href="https://devpost.com/software/rexthor" target="_blank"><img class="modal-image" ng-src="images/rexthor.jpg" src="images/rexthor.jpg"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="https://devpost.com/software/rexthor">Rexthor</a> utilises facial emotion recognition to sense what and how the user is feeling the given day and sets the mood of lighting, music, temperature, TV shows, etc. accordingly. It also uses speech recognition to personalise for each user, whether he/she wants to skip to another song or change the settings of a device(air conditioner, TV, etc.)</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox10" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">Battlepedia for Pokémon Go</h2>
+                                </center>
+
+                                <a href="https://github.com/nisargkolhe/Battlepedia-for-Pokemon-Go" target="_blank"><img class="modal-image" ng-src="images/battlepedia_feature.jpg" src="images/battlepedia_feature.jpg"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="https://github.com/nisargkolhe/Battlepedia-for-Pokemon-Go">Battlepedia for Pokémon Go</a> is a companion app for Pokémon Go with all the data, info and tools needed to win and defend gyms. The app was rejected from Google Play Store for containing copyrighted content(even though loads of other apps on Play Store use Pokémons without any problems), so I open sourced it on GitHub. For now the app is exclusively on Android, and the design is heavily inspired by Google's Material Guidelines.</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox9" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">GamesKart</h2>
+                                </center>
+
+                                <a href="http://gameskart.org" target="_blank"><img class="modal-image" ng-src="images/gameskart.png" src="images/gameskart.png"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="http://gameskart.org">GamesKart</a> is an online shopping portal for digital games, gaming hardware and accessories. I worked with the Shopify API and themes to customize the e-commerce portal. I also Developed a light weight yet modern design inspired responsive corporate website, shown here.</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox8" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">Decrypt '15</h2>
+                                </center>
+
+                                <a href="http://fic.hinducollege.net/" target="_blank"><img class="modal-image" ng-src="images/decrypt.jpg" src="images/decrypt.jpg"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="Decrypt '15">Decrypt '15</a> was the online cryptic treasure hunt based case study by the Finance &amp; Investment Cell of Hindu College, part of Delhi University. I was responsible for designing the whole website, front-end as well as the back-end which involved PHP, MySQL and AngularJS in addition to HTML5 and CSS3.</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox7" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">(c)ync 2015 App</h2>
+                                </center>
+
+                                <a href="https://play.google.com/store/apps/details?id=com.clubcypher.cync" target="_blank"><img class="modal-image" ng-src="images/cyncapp.png" src="images/cyncapp.png"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding">Official app for (c)ync v2.0 the Inter School Technology Symposium of DPS Bhopal conducted by (c)ypher the Computer club of DPS Bhopal.</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox6" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">Le DPI Changer</h2>
+                                </center>
+
+                                <a href="https://play.google.com/store/apps/details?id=me.nisarg.setdpi" target="_blank"><img class="modal-image" ng-src="images/ldc.jpg" src="images/ldc.jpg"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="https://play.google.com/store/apps/details?id=me.nisarg.setdpi">Le DPI Changer</a> allows you to update your screen DPI persistently in a single click and restore back easily. Le DPI Changer is the only app in the Play Store to be compatible with devices such as OnePlus 2, OnePlus X and devices running Android 6.0 Marshmallow. With over 100,000 downloads and average 4.1/5 rating on Google Play Store, the app is scaling pretty well.</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox5" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">(c)yntax</h2>
+                                </center>
+
+                                <a href="https://www.issuu.com/cyntax" target="_blank"><img class="modal-image" ng-src="images/cyntax.jpg" src="images/cyntax.jpg"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="https://www.issuu.com/cyntax">(c)yntax</a> is the IT Bulletin of DPS Bhopal published by (c)ypher, the Computer Club of DPS, Bhopal. (c)yntax talks about how technology is important in this age and keeps its readers updated with latest news happening in the world of tech. I was the Creative Director and Head Graphic Designer of the first two volumes of the magazine, so basically everything from covers to index was designed by me on Adobe Photoshop and InDesign.</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox4" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">(c)ypher</h2>
+                                </center>
+
+                                <a href="http://clubcypher.com" target="_blank"><img class="modal-image" ng-src="images/cypher.png" src="images/cypher.png"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="http://clubcypher.com">(c)ypher</a> is the official Computer Club of DPS Bhopal, which I co-founded. I contributed to website's design and development, which includes a members only admin panel, blog and some static webpages. Many of my other projects are results of this club.</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox3" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">Decypher</h2>
+                                </center>
+
+                                <a href="http://cync.clubcypher.com/decypher" target="_blank"><img class="modal-image" ng-src="images/decypher.png" src="images/decypher.png"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="http://cync.clubcypher.com/decypher">Decypher</a> was an Online Cryptic Hunt, a part of the Inter School Technology Symposium (c)ync 2014 and (c)ync v2 2015. The website included user panel with a quiz like layout and an admin panel for the moderators to moderate the players. It also included some trick levels, some requiring editing the cookies or the web page source code. The development was done by me and a friend, while the designing was done by me alone with a few inputs from other group members.</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox2" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">(c)ync 2014</h2>
+                                </center>
+
+                                <a href="https://nisarg.me/cync" target="_blank"><img class="modal-image" ng-src="images/cync.png" src="images/cync.png"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="https://nisarg.me/cync">(c)ync</a> was the first ever Inter School Technology Symposium held in the city of Bhopal organised by (c)ypher, the Computer Club of DPS Bhopal. The website includes a home page with details about the various events laid out linearly. Also there's a teacher's panel to register and track their students taking part in the symposium in an efficient UI. Both designing and development was done by me over the course of a few weeks. I also designed all the posters related to this event, which falls under Graphic Designing.</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects --><div class="ng-modal-dialog animated fadeIn ng-scope ng-hide" ng-show="project.detail != 0" ng-repeat="projectdet in site.projects">
+                        <div ng-show="project.detail == projectdet.id" ng-class="myClass" id="detailbox1" class="ng-hide">
+                            <div class="ui-buttons ng-modal-close" ng-click="project.detail=0">
+                                <i class="icon ion-ios-close-empty"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-next" ng-click="project.detail==site.projects.length?project.setDetail(1):project.next()">
+                                <i class="icon ion-ios-arrow-right"></i>
+                            </div>
+                            <div class="ui-buttons ng-modal-previous" ng-click="project.detail==1?project.setDetail(site.projects.length):project.previous()">
+                                <i class="icon ion-ios-arrow-left"></i>
+                            </div>
+                            <div class="ng-modal-dialog-content">
+                                <center>
+                                    <h2 class="ng-binding">Cashback India</h2>
+                                </center>
+
+                                <a href="http://www.cashbackindia.in" target="_blank"><img class="modal-image" ng-src="images/cashback.jpg" src="images/cashback.jpg"></a>
+                                <div class="modal-text"><p ng-bind-html="to_trusted(projectdet.desc)" class="ng-binding"><a target="_blank" href="http://www.cashbackindia.in">Cashback India</a> is supposedly India's no. 1 cashback provider with over 500+ partnered brands to help you save extra when shopping online. I worked on the back-end of the website coding everything from user login and account to full fledged admin panel for controlling the website</p></div>
+                            </div>
+                        </div>
+                    </div><!-- end ngRepeat: projectdet in site.projects -->
+                </div>
+
+                <section class="wow fadeIn" data-wow-offset="100" style="visibility: hidden; animation-name: none;">
+                    <h1>Contact</h1>
+                    <p>Have a nice idea and need a pair of technical hands? Or just want to talk casually about space and dogs? Hit me up here!</p>
+                    <section style="text-align:left;">
+                        <form novalidate="" ng-controller="formController as formCntrl" name="emailForm" ng-submit="formCntrl.submitForm()" class="ng-pristine ng-scope ng-invalid ng-invalid-required ng-valid-email">
+                            <input class="cform wow fadeIn ng-pristine ng-untouched ng-invalid ng-invalid-required" type="text" placeholder="Your Name" name="name" ng-model="email.name" required="" style="visibility: hidden; animation-name: none;">
+                            <input class="cform wow fadeIn ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required" type="email" placeholder="Email" name="email" ng-model="email.email" required="" style="visibility: hidden; animation-name: none;">
+                            <textarea class="cform wow fadeIn ng-pristine ng-untouched ng-valid" name="body" placeholder="Your Message" style="width: 90%; height: 200px; font-size: 16px; visibility: hidden; animation-name: none;" ng-model="email.body"></textarea>
+                            <p style="font-size: 1em; margin: 1em;" ng-show="emailForm.$invalid &amp;&amp; !emailForm.$pristine" class="help-block ng-hide">Please fill in the form properly.</p>
+                            <input type="submit" class="wow fadeIn" value="Submit" name="submit" style="margin: 15px; visibility: hidden; animation-name: none;" ng-disabled="!emailForm.$valid" disabled="disabled">
+                            <p style="font-size: 1em; margin: 1em;" ng-show="success" class="help-block ng-hide">Thanks for contacting! I'll get back to you shortly.</p>
+                        </form>
+
+                        <p class="hidden" style="margin:15px;"></p>
+                    </section>
+                    <!--<p class="credits">Background by <a href="http://levelofambiguity.tumblr.com/">Marcelo Quinan</a></p>-->
+                </section>
+            </div><!--<a href="#mainbody"><button id="downarrow"><a href="#mainbody"></a><a href="#mainbody"></a><a href="#mainbody"><img class="rot180" src="http://aospa.co/files/images/PAUP.svg" alt="Down arrow" /></a> -->
+            <script src="headprlx.js" type="text/javascript"></script>
+
+</body>
+</html>

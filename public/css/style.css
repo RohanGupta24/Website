@@ -1,0 +1,717 @@
+
+html, html a {
+    text-shadow: 1px 1px 1px #f35626;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: subpixel-antialiased !important;
+}
+
+html {
+    background-color:white
+    /*background: url(../images/bg2blur.jpg) no-repeat center center fixed;*/
+    /*position: relative;
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+     -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;*/
+}
+
+html, body {
+    background-color: lightblue;
+    font-family: 'Lato',sans-serif;
+    font-weight: 300;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink .7s infinite;
+    animation: blink .7s infinite;
+    font-size: 2em;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    height: 0 !important;
+    background-color: #f44336;
+    max-width: 100%;
+    padding: 0;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+.tint {
+    z-index: 1;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    -webkit-background-clip: text;
+    -webkit-animation: huehuehue 30s infinite linear; 
+}
+
+.splash, .splash-img, .splash-img-blur {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -9999;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.splash {
+    position: fixed;
+    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    -webkit-background-clip: text;
+    -webkit-animation: huehuehue 30s infinite linear;
+    top: 0;
+}
+
+.splash-img, .splash-img-blur {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;  background-size: cover;
+}
+
+.splash-img {
+    background-image: url(../images/bg2.jpg);
+}
+
+.splash-img-blur {
+    opacity: 0;
+    background-image: url(../images/bg2blur.jpg);
+}
+
+.blur {
+    width: 100%;
+    overflow: auto;
+    display: block;
+    z-index: -10;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../images/bg2blur.jpg);
+}
+
+.splash h1 {
+    font-family: 'Lato',sans-serif !important;
+    z-index: 1;
+    position: relative;
+    color: #f44336;
+    font-size: 3em;
+    font-weight: 100 !important;
+    margin: 0;
+    height: 160px;
+    line-height: 160px !important;
+}
+
+.splash h2 {
+    font-family: 'Roboto Slab',sans-serif !important;
+    font-weight: 100 !important;
+    z-index: 1;
+    position: relative;
+    color: #f44336;
+    font-size: 2em;
+    font-size: 36px !important;
+    margin: 0;
+    margin-top: 18px;
+    width: 100%;
+    height: 36px;
+    line-height: 36px !important;
+}
+
+.splashdtext {
+    font-size: 1.5em;
+}
+
+.resume {
+    font-size: 1.5em;
+    height: auto !important;
+    width: auto !important;
+    padding: 1em 2em !important;
+    margin: 2em !important;
+    display: none;
+}
+
+.resume-viewer {
+    max-width: 1080px;
+    max-height: 80%;
+}
+
+#mainbody {
+    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    -webkit-background-clip: text;
+    -webkit-animation: huehuehue 30s infinite linear;
+    margin-top: 200%;
+    position: relative;
+    display: none;
+}
+
+section {
+    width: 90%;
+    max-width: 960px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+.section {
+    text-align: center !important;
+}
+
+h1 {
+    font-weight: 200;
+    color: #f44336;
+    font-size: 60px;
+}
+
+h2 {
+    font-weight: 200;
+    color: #f44336;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 50px;
+}
+
+a {
+    /*border-bottom: .08em solid hsla(0,0%,100%,.4);*/
+    padding-bottom: .08em;
+    text-decoration: none;
+    vertical-align: baseline;
+    margin: 0;
+    background: 0 0;
+    font-weight: 300;
+    color: #f44336
+    ;
+    -webkit-transition: border-bottom .5s;
+    transition: border-bottom .5s;
+}
+
+    a:hover {
+        text-decoration: none;
+        text-shadow: 0 0 2px #999;
+        border-bottom: .08em solid #fff;
+    }
+
+p {
+    color: #f44336;
+    font-size: 21px;
+    line-height: 35px;
+}
+
+#social {
+    z-index: 1;
+    width: 100%;
+    display: block;
+    bottom: 0;
+    position: absolute;
+    margin-bottom: 50px;
+    font-size: 2em;
+}
+
+    #social a {
+        border-bottom: none;
+        margin: 10px;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+    }
+
+.loadBg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f44336;
+    z-index: 9998;
+}
+
+.loader {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+	margin-left: -70px;
+	
+    margin-top: -80px;
+    z-index: 9999;
+     background: 50% 50% no-repeat rgb(249,249,249); 
+    display: block;
+    font-family: 'Lato',sans-serif !important;
+    font-size: 5em;
+    font-weight: 100;
+    line-height: 160px;
+    text-align: center;
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg,#f35626 0%,#feab3a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: huehuehue 10s infinite linear;
+}
+
+.container {
+    margin: 10px;
+    width: 90%;
+    max-width: 960px;
+    height: auto;
+    line-height: 115px;
+    text-align: center;
+    outline: none;
+    background-color: #f44336;
+    border-color: #9ecaed;
+    box-shadow: 0 0 20px #9ecaed;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.modal-text {
+    font-size: 1em !important;
+    width: 80% !important;
+    max-width: 1080px !important;
+    margin: 1em auto !important;
+}
+
+.resize_fit_center {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.container:hover {
+    border-color: #79b9ee;
+    box-shadow: 0 0 40px #72b9f4;
+}
+
+.cform {
+    line-height: 16px;
+    background: none;
+    border-color: hsla(0,0%,100%,.4);
+    border-style: none none solid;
+    border-width: 1px;
+    border-radius: 0;
+    margin: 30px 15px;
+    color: #f44336;
+    -webkit-transition: border-bottom .5s ease;
+    -webkit-transition: border-bottom .5s;
+    transition: border-bottom .5s;
+}
+
+    .cform:focus {
+        outline: none;
+        border-bottom: .08em solid #fff;
+    }
+
+.projects {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.projectbox {
+    width: 100%;
+}
+
+.projectboxin {
+    background-size: cover;
+    height: 150px;
+}
+
+.ng-modal-dialog-o {
+     A centered div above the overlay with a box shadow. 
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+     Default 
+    height: auto;
+     Center the dialog 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+.ng-modal-dialog-content-o {
+    padding: 10px;
+    text-align: left;
+    height: 100%;
+    z-index: 9999;
+}
+
+.ui-buttons {
+    position: fixed;
+    cursor: pointer;
+    font-size: 2em;
+    color: #f44336;
+}
+
+.ng-modal-close-o {
+    position: absolute;
+    top: 1em;
+    right: 5px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 120%;
+    display: inline-block;
+    font-weight: 700;
+    color: #f44336;
+    font-family: 'arial','sans-serif';
+    z-index: 9999;
+}
+
+.ng-modal-overlay {
+     A dark translucent div that covers the whole screen 
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .8;
+}
+
+.ng-modal-dialog {
+     A centered div above the overlay with a box shadow. 
+    z-index: 10000;
+    position: fixed;
+    width: 100%;
+     Default 
+     Center the dialog 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    background-color: rgba(0,0,0,0);
+}
+
+.ng-hide.ng-hide-animate {
+display: none !important;
+}
+
+.ng-modal-dialog-content {
+    padding: 10px;
+    text-align: center;
+    overflow: scroll;
+}
+
+.ng-modal-close {
+    top: 3px;
+    right: 1em;
+    font-size: 3em;
+}
+
+.ng-modal-next {
+    top: 45%;
+    right: 10px;
+}
+
+.ng-modal-previous {
+    top: 45%;
+    left: 10px;
+}
+
+.modal-image {
+    max-width: 80%;
+}
+
+.show {
+    display: block;
+}
+
+.dontshow {
+    display: none;
+}
+
+input[type=text], input[type=textarea], [type=email] {
+    width: 90%;
+    font-size: 16px;
+}
+
+input[type=submit] {
+    color: #000;
+    border-color: rgba(0,0,0,.5);
+    border-radius: 2px;
+    background-color: transparent;
+    border: 1px solid;
+    width: 140px;
+    height: 40px;
+    -webkit-transition: background-color .5s;
+    transition: background-color .5s;
+}
+
+    input[type=submit]:hover {
+        color: #000 !important;
+        border-color: #000 !important;
+        background-color: white !important;
+        border: 1px solid;
+        cursor: pointer;
+    }
+
+.ng-invalid.ng-dirty {
+    border-color: #f44336;
+}
+
+input[disabled]:hover {
+    color: #fff !important;
+    border-color: #f44336 !important;
+    background-color: #f44336 !important;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.activeBt {
+    color: #000 !important;
+    border-color: #000 !important;
+    background-color: #fff !important;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.pnav {
+    max-width: 960px;
+    margin: 80px auto;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.pnavbtns {
+    width: 50%;
+    position: relative;
+    margin: 1em auto;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0 auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+    .nav-list > li {
+        float: left;
+        margin: 1em;
+        position: relative;
+    }
+
+        .nav-list > li:last-child a {
+            margin-right: 0;
+        }
+
+::-webkit-input-placeholder {
+    font-family: 'Lato',sans-serif;
+    font-weight: 300;
+    color: #fff;
+    font-size: 21px;
+}
+
+:-moz-placeholder {
+     Firefox 18- 
+    font-family: 'Lato',sans-serif;
+    font-weight: 200;
+    color: #fff;
+    font-size: 21px;
+}
+
+::-moz-placeholder {
+     Firefox 19+ 
+    font-family: 'Lato',sans-serif;
+    font-weight: 200;
+    color: #fff;
+    font-size: 21px;
+}
+
+:-ms-input-placeholder {
+    font-family: 'Lato',sans-serif;
+    font-weight: 200;
+    color: #fff;
+    font-size: 21px;
+}
+
+.footer {
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,rgba(0,0,0,0)),color-stop(50%,rgba(0,0,0,.75))6 color-stop(100%,rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.1) 20%,rgba(0,0,0,.75) 60%,rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(top,rgba(0,0,0,0) 0,rgba(0,0,0,.1) 20%,rgba(0,0,0,.5) 60%,rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom,rgba(0,0,0,0) 0,rgba(0,0,0,.1) 20%,rgba(0,0,0,.5) 60%,rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000',endColorstr='#a6000000',GradientType=0);
+    height: 10em;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.credits {
+    font-size: 1em;
+    opacity: 0.5;
+    text-align: center;
+}
+
+#downarrow {
+    position: fixed;
+    bottom: 10px;
+    right: 50%;
+    left: 50%;
+    z-index: 10;
+    opacity: .5;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    outline: transparent;
+    -webkit-animation-name: downarrowIn;
+    animation-name: downarrowIn;
+}
+
+    #downarrow.hidden {
+        -webkit-animation-name: downarrowOut;
+        animation-name: downarrowOut;
+    }
+
+img.rot180 {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+@media screen and (min-width: 380px) {
+    .splash h1 {
+        font-size: 4em;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .projectbox {
+        width: 50%;
+    }
+
+    .splashdtext {
+        font-size: 2em;
+    }
+
+    .ng-modal-next {
+        right: 1em;
+    }
+
+    .ng-modal-previous {
+        left: 1em;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .splash h1 {
+        font-size: 5em;
+    }
+
+    .pnavbtns {
+        width: 20%;
+    }
+
+    .resume {
+        display: inline;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .splash h1 {
+        font-size: 7em;
+    }
+
+    .projectbox {
+        width: 33.33%;
+    }
+
+    .modal-image {
+        height: 60%;
+        width: auto;
+        max-width: 1080px;
+    }
+}
+
+@-webkit-keyframes huehuehue {
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
+}
+
+#loading {
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(black,#054ecd);
+    background-color: #fff;
