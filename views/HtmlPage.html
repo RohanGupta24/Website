@@ -126,57 +126,5 @@
             <div class="splash-img-blur"></div>-->
         </div>
 
-        <section class="wow fadeIn animated" style="visibility: visible; animation-name: fadeIn; overflow: hidden">
-            <h1>About</h1>
-
-            <p>Hi! I'm Rohan, a freshman at Purdue University majoring in Computer Science. I'm a technology enthusiast ready to solve the world's problems through the most innovative software. I'm particularly interested in machine learning and data analytics, but I am willing to explore other realms of programming. Check out my Github for the types of programming projects I have done both inside and outside the classroom.</p>
-        </section>
-
-        <section>
-            <h1>Personal Details</h1>
-        </section>
-
-        <div class="pnav">
-            <section class="pnavbtns"><input type="submit" value="Inspiration" ng-class="{ activeBt:project.isSet(0) }" ng-click="eatme=false; loveme=false; hugme=false; kissme=false; laughme=false; showme=true" style="width: 100% !important" class="activeBt"></section>
-
-            <section class="pnavbtns"><input type="submit" value="Work Experience" ng-class="{ activeBt:project.isSet(1) }" ng-click="showme=false; loveme=false; hugme=false; kissme=false; laughme=false; eatme=true" style="width: 100% !important"></section>
-
-            <section class="pnavbtns"><input type="submit" value="Personal Projects" ng-class="{ activeBt:project.isSet(2) }" ng-click="showme=false; eatme=false; hugme=false; kissme=false; laughme=false; loveme=true" style="width: 100% !important"></section>
-
-            <section class="pnavbtns"><input type="submit" value="Hackathon Projects" ng-class="{ activeBt:project.isSet(3) }" ng-click="showme=false; eatme=false; loveme=false; kissme=false; laughme=false; hugme=true" style="width: 100% !important"></section>
-
-            <section class="pnavbtns"><input type="submit" value="Courses" ng-class="{ activeBt:project.isSet(4) }" ng-click="showme=false; eatme=false; loveme=false; hugme=false; laughme=false; kissme=true" style="width: 100% !important"></section>
-
-            <section class="pnavbtns"><input type="submit" value="Clubs and Organizations" ng-class="{ activeBt:project.isSet(5) }" ng-click="eatme=false; loveme=false; hugme=false; laughme=false; kissme=false; laughme=true" style="width: 100% !important"></section>
-        </div>        
-
-        <div class="projects">
-             <p ng-show="showme">My initial programming experience started when I took a game design course at DigiPen Instititue of Technology. I then took an Object-Oriented programming course at University of Washington before deciding to enroll in AP Computer Science in my high school.</p>
-             <p ng-show="eatme">I have gained a strong technical background over the summer when I interned at UPS as a software engineer. I helped develop a mobile and web interface that allows jobs to be dispatched to drivers automatically so that planes may be loaded and unloaded more frequently and efficiently. The following are some of the accomplishments and skills I have gained this summer at UPS: (1) I learned about different software platforms such as Visual Studio, Xamarin, SQL Server Management Studio, Couchbase, and OpenShift. (2) I programmed in different languages and frameworks such as HTML & CSS, Javascript (Angular JS and D3.js), C#, Python, SQL, and XAML. (3) I was introduced to different hardware platforms and devices that can be integrated with software such as Raspberry Pi, Arduino, and the Intel Recon Pro glasses. (4) I experienced first-hand the agile software development process, which included three-week iteration meetings, daily standup meetings, and pair programming; I learned how to make user stories and assign tasks on the Team Foundation Server (TFS). (5) I worked with a technical lead programmer and a business analyst to understand the development of the product and the business opportunities of our project; I helped test our app by receiving advice and feedback from potential users. (6) I gained strong communication skills through numerous technical presentations of our project and app. (7) I prepared a technical document outlining the project's goals and the specifics of our implementation. (8) Accomplishments: Our app is estimated to save drivers approximately 2 to 3 hours; the app is currently deployed to around 200 users; and the company has extended this app to include other areas of package transportation.</p>
-             <p ng-show="hugme">I have participated in several hackathons and programming-related events including Boilermake, HackIllinois, HackGT, and BigRedHacks. Some of the projects I have worked on include Prescription Merge Conflict, a simple web app that informs patients which combination of medications are considered dangerous, and Music Recommendation, an app that suggests songs and music based on Spotify user history.</p>
-             <p ng-show="kissme">I'm majoring in Computer Science and minoring in Economics. The concentrations of CS that I am planning on taking include Machine Intelligence, Foundations of Computer Science, and Programming Languages. Some of the courses I have taken are Introduction to Object-Oriented Programming, Discrete Mathematics, and Programming in C. The courses I am currently taking include Data Structures and Algorithms, Computer Architecture, and Web Application Programming. Next semester, I will take Systems Programming and iOS Development.</p>
-             <p ng-show="laughme">Clubs and Organizations: Computer Science Undergraduate Student Board (organize events such as Student Forum, Corporate Partner Mixer, Kanban Challenge, and CS 193: Tools - a freshman-oriented course; Purdue Hackers (organize events such as Intro to Machine Learning Tech Talks and Hello World - a freshman-only hackathon; and LaunchPad (a mentorship program in which a mentor and a mentee get paired up to work on a software-related project for one semester).</p>
-
-
-        </div>
-
-                <section class="wow fadeIn" data-wow-offset="100" style="visibility: hidden; animation-name: none;">
-                    <h1>Contact</h1>
-                    <p>Complete the form below to message me about cool programming projects or internship opportunities! </p>
-                    <section style="text-align:left;">
-                        <form novalidate="" ng-controller="formController as formCntrl" name="emailForm" ng-submit="formCntrl.submitForm()" class="ng-pristine ng-scope ng-invalid ng-invalid-required ng-valid-email">
-                            <input class="cform wow fadeIn ng-pristine ng-untouched ng-invalid ng-invalid-required" type="text" placeholder="Name:" name="name" ng-model="email.name" required="" style="visibility: hidden; animation-name: none;">
-                            <input class="cform wow fadeIn ng-pristine ng-untouched ng-valid-email ng-invalid ng-invalid-required" type="email" placeholder="Email:" name="email" ng-model="email.email" required="" style="visibility: hidden; animation-name: none;">
-                            <textarea class="cform wow fadeIn ng-pristine ng-untouched ng-valid" name="body" placeholder="Message:" style="width: 90%; height: 200px; font-size: 16px; visibility: hidden; animation-name: none;" ng-model="email.body"></textarea>
-                            <p style="font-size: 1em; margin: 1em;" ng-show="emailForm.$invalid &amp;&amp; !emailForm.$pristine" class="help-block ng-hide">Form is incomplete.</p>
-                            <input type="submit" class="wow fadeIn" value="Submit" name="submit" style="margin: 15px; visibility: hidden; animation-name: none;" ng-disabled="!emailForm.$valid" disabled="disabled">
-                            <p style="font-size: 1em; margin: 1em;" ng-show="success" class="help-block ng-hide">Thank you for messaging me. Expect a response in two to three days.</p>
-                        </form>
-
-                        <p class="hidden" style="margin:15px;"></p>
-                    </section>
-                    <!--<p class="credits">Background by <a href="http://levelofambiguity.tumblr.com/">Marcelo Quinan</a></p>-->
-                </section>
-
 </body>
 </html>
