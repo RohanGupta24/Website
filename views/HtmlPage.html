@@ -80,7 +80,7 @@
                     //var options = {
                     //    fallbackLink: '<p>This browser does not support inline PDFs. Please download the PDF to view it: <a href="https://www.dropbox.com/s/b9o2q9xkxzzwfji/GuptaCSResume_Summer2017.pdf?dl=0">Download PDF</a></p>'
                     //};
-                    //PDFObject.embed("https://www.dropbox.com/s/b9o2q9xkxzzwfji/GuptaCSResume_Summer2017.pdf?dl=0", "#resume", options);
+                    PDFObject.embed("css/resume/GuptaCSResumeOfficial", "#resume");
                 }, 10);
         });
     </script>
@@ -102,8 +102,13 @@
                     <div class="wow fadeInDown desc" style="z-index: 999; position: relative; color: rgb(255, 0, 0); visibility: visible; animation-name: fadeInDown;" ng-show="!showResume">
                         <span class="wow fadeInDown splashdtext" style="visibility: visible; animation-name: fadeInDown;">I'm</span> <span id="typed" class="wow fadeInDown whoiam splashdtext animated" style="visibility: visible; animation-name: fadeInDown;"></span><span class="typed-cursor"></span>
                     </div><br><br>
-                    <div>
-                  <input type="submit" style="background-color:red" style="color:white" value="Resume" class="wow fadeIn resume animated" onclick="location.href='https://www.dropbox.com/s/x7ij0qzclmypolj/GuptaCSResumeOfficial.pdf?dl=0';"/></a>
+                    <input type="submit" value="Resume" class="wow fadeIn resume" data-wow-delay="1s" ng-click='showResume=true' ng-show="!showResume"/>
+                    <div ng-show="showResume" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
+                        <div class='ng-modal-overlay' ng-click='showResume=false'></div>
+                        <div class='ng-modal-dialog resume-viewer' id="resume"></div>
+                        <div class='ui-buttons ng-modal-close' ng-click="showResume=false" style="z-index: 1;">
+                            <i class="icon ion-ios-close-empty"></i>
+                        </div>
                     </div>
                     <div>
                         <h2><b>Sophomore in Computer Science at Purdue <br> <br> Software Engineering Intern at HPE and UPS<b><h2>
