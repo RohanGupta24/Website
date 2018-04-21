@@ -45,8 +45,8 @@
 
     <script src="js/jquery.min.js" type="text/javascript"></script>
     <script src="js/pdfobject.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="js/angular.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script><!--   <script type="text/javascript" src="js/SmoothScroll.js">-->
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script><!--   <script type="text/javascript" src="js/SmoothScroll.js">-->
 
     <script src="js/wow.min.js" type="text/javascript"></script>
     <script src="js/typed.js" type="text/javascript"></script>
@@ -103,7 +103,7 @@
                         <span class="wow fadeInDown splashdtext" style="visibility: visible; animation-name: fadeInDown;">I'm</span> <span id="typed" class="wow fadeInDown whoiam splashdtext animated" style="visibility: visible; animation-name: fadeInDown;"></span><span class="typed-cursor"></span>
                     </div><br><br>
                     <input type="submit" value="Resume" class="wow fadeIn resume" data-wow-delay="1s" ng-click="showResume=true" ng-show="!showResume">
-                    <div onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
+                    <div ng-show="showResume" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
                         <div class='ng-modal-overlay' ng-click='showResume=false'></div>
                         <div class='ng-modal-dialog resume-viewer' id="resume"></div>
                         <div class='ui-buttons ng-modal-close' ng-click="showResume=false" style="z-index: 1;">
