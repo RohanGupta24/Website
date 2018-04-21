@@ -13,7 +13,7 @@
 	
 	app.controller('projectController', ['$timeout','$interval','$scope','$sce', function($interval,$timeout,$scope,$sce){
 		console.log("hello");
-		$scope.showResume = true;
+		$scope.showResume = false;
 		console.log($scope.showResume)
 		this.type = 0;
 		this.detail = 0;
