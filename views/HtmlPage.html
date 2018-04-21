@@ -102,8 +102,8 @@
                     <div class="wow fadeInDown desc" style="z-index: 999; position: relative; color: rgb(255, 0, 0); visibility: visible; animation-name: fadeInDown;" ng-show="!showResume">
                         <span class="wow fadeInDown splashdtext" style="visibility: visible; animation-name: fadeInDown;">I'm</span> <span id="typed" class="wow fadeInDown whoiam splashdtext animated" style="visibility: visible; animation-name: fadeInDown;"></span><span class="typed-cursor"></span>
                     </div><br><br>
-                    <input type="submit" value="Resume" class="wow fadeIn resume" data-wow-delay="1s" ng-click='showResume=true'/>
-                    <div ng-show="showResume" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';">
+                    <input type="submit" value="Resume" class="wow fadeIn resume" data-wow-delay="1s" ng-click="showResume=true" ng-show="!showResume">
+                    <div ng-show="showResume" onmouseover="document.body.style.overflow='hidden';" onmouseout="document.body.style.overflow='auto';" class="ng-hide">
                         <div class='ng-modal-overlay' ng-click='showResume=false'></div>
                         <div class='ng-modal-dialog resume-viewer' id="resume"></div>
                         <div class='ui-buttons ng-modal-close' ng-click="showResume=false" style="z-index: 1;">
