@@ -59,6 +59,11 @@
    		$scope.to_trusted = function(html_code) {
 		    return $sce.trustAsHtml(html_code);
 		}
+
+		$scope.resumeButtonPressed = function() {
+			console.log("reached")
+			$scope.showResume = true;
+		}
 	}]);
 	
 	app.controller('formController', ['$scope','$http',function($scope,$http){
