@@ -2,14 +2,14 @@
 	var app = angular.module('personal', []);
 	var projNum = 0;
 
-	/*app.controller('Controller', ['$http', function($http){
+	app.controller('Controller', ['$http', function($http){
 	    var personal = this;
 	    personal.projects = [];
-	    $http.get('projects.json').success(function(data){
+	    /*$http.get('projects.json').success(function(data){
 	    	personal.projects = data.reverse();
-	    });
+	    });*/
 	    projNum = personal.projects.length;
-    }]);*/
+    }]);
 
 	app.controller('projectController', ['$timeout','$interval','$scope','$sce', function($interval,$timeout,$scope,$sce){
 		console.log("hello");
