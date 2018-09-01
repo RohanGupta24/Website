@@ -94,7 +94,7 @@ body {
 }
 
 .splash {
-    position: fixed;
+    /*position: fixed;*/
     background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
     -webkit-background-clip: text;
     -webkit-animation: huehuehue 30s infinite linear;
