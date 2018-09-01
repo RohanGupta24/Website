@@ -63,7 +63,7 @@ html, body {
 }
 
 body {
-    height: 0 !important;
+    /*height: 0 !important;*/
     background-color: #f44336;
     max-width: 100%;
     padding: 0;
@@ -79,7 +79,7 @@ body {
     left: 0;
     background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
     -webkit-background-clip: text;
-    -webkit-animation: huehuehue 30s infinite linear; 
+    -webkit-animation: huehuehue 30s infinite linear;
 }
 
 .splash, .splash-img, .splash-img-blur {
@@ -272,10 +272,10 @@ p {
     top: 50%;
     left: 50%;
 	margin-left: -70px;
-	
+
     margin-top: -80px;
     z-index: 9999;
-     background: 50% 50% no-repeat rgb(249,249,249); 
+     background: 50% 50% no-repeat rgb(249,249,249);
     display: block;
     font-family: 'Lato',sans-serif !important;
     font-size: 5em;
@@ -368,13 +368,13 @@ p {
 }
 
 .ng-modal-dialog-o {
-     A centered div above the overlay with a box shadow. 
+     A centered div above the overlay with a box shadow.
     z-index: 1000;
     position: absolute;
     width: 100%;
-     Default 
+     Default
     height: auto;
-     Center the dialog 
+     Center the dialog
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -413,7 +413,7 @@ p {
 }
 
 .ng-modal-overlay {
-     A dark translucent div that covers the whole screen 
+     A dark translucent div that covers the whole screen
     position: absolute;
     z-index: 1;
     top: 0;
@@ -425,12 +425,12 @@ p {
 }
 
 .ng-modal-dialog {
-     A centered div above the overlay with a box shadow. 
+     A centered div above the overlay with a box shadow.
     z-index: 10000;
     position: fixed;
     width: 100%;
-     Default 
-     Center the dialog 
+     Default
+     Center the dialog
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -573,7 +573,7 @@ input[disabled]:hover {
 }
 
 :-moz-placeholder {
-     Firefox 18- 
+     Firefox 18-
     font-family: 'Lato',sans-serif;
     font-weight: 200;
     color: #fff;
@@ -581,7 +581,7 @@ input[disabled]:hover {
 }
 
 ::-moz-placeholder {
-     Firefox 19+ 
+     Firefox 19+
     font-family: 'Lato',sans-serif;
     font-weight: 200;
     color: #fff;
