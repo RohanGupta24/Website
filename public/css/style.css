@@ -245,7 +245,7 @@ p {
     width: 100%;
     display: block;
     bottom: 0;
-    position: absolute;
+    /*position: absolute;*/
     margin-bottom: 50px;
     font-size: 2em;
 }
