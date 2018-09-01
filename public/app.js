@@ -1,16 +1,16 @@
 (function(){
 	var app = angular.module('personal', []);
 	var projNum = 0;
-	
-	app.controller('Controller', ['$http', function($http){
+
+	/*app.controller('Controller', ['$http', function($http){
 	    var personal = this;
 	    personal.projects = [];
 	    $http.get('projects.json').success(function(data){
 	    	personal.projects = data.reverse();
 	    });
 	    projNum = personal.projects.length;
-    }]);
-	
+    }]);*/
+
 	app.controller('projectController', ['$timeout','$interval','$scope','$sce', function($interval,$timeout,$scope,$sce){
 		console.log("hello");
 		$scope.showResume = false;
@@ -40,7 +40,7 @@
 			var myEl = angular.element( document.querySelector( '#detailbox'+this.detail ) );
 			console.log(myEl);
 			myEl.removeClass('fadeIn');
-			myEl.addClass('animated fadeOut'); 
+			myEl.addClass('animated fadeOut');
 			var detail;
 			function resetDetail(){
 				detail = 0;
@@ -48,14 +48,14 @@
 			}
 			//setTimeout(resetDetail(),1000);
 			setTimeout(function() { resetDetail() },1000);
-			
+
 			this.detail=detail
 			//$timeout(this.detail=detail,1000);
-			
+
 			console.log("outside fn "+this.detail);*/
 			//$(".ng-modal-overlay").hide('slow',function(){this.detail=0;});
    		};
-   		
+
    		$scope.to_trusted = function(html_code) {
 		    return $sce.trustAsHtml(html_code);
 		},
@@ -65,7 +65,7 @@
 			$scope.showResume = true;
 		}
 	}]);
-	
+
 	app.controller('formController', ['$scope','$http',function($scope,$http){
 		$scope.status = "Submit";
 		$scope.success = false;
@@ -94,7 +94,7 @@
 		        data: $scope.email,
 		        method: 'POST',
 		        headers : {'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'}
-		
+
 		    }).success(function(data){
 			    if(data.success){
 				    $scope.status = "Email Sent";
@@ -107,12 +107,12 @@
 			    }
 			    }).error(function(err){"ERR", console.log(err)})
 */
-				
-		
+
+
 		    		    };
-		
+
 	}])
-	
+
 	app.directive('work', function(){
 		return {
 			restrict : 'E',
