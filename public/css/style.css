@@ -167,6 +167,14 @@ body {
     font-size: 1.5em;
 }
 
+.resume {
+    font-size: 1.5em;
+    height: auto !important;
+    width: auto !important;
+    padding: 1em 2em !important;
+    margin: 2em !important;
+    display: none;
+}
 
 .resume-viewer {
     max-width: 1080px;
@@ -360,7 +368,6 @@ p {
 }
 
 .ng-modal-dialog-o {
-     A centered div above the overlay with a box shadow.
     z-index: 1000;
     position: absolute;
     width: 100%;
@@ -405,7 +412,6 @@ p {
 }
 
 .ng-modal-overlay {
-     A dark translucent div that covers the whole screen
     position: absolute;
     z-index: 1;
     top: 0;
@@ -417,12 +423,9 @@ p {
 }
 
 .ng-modal-dialog {
-     A centered div above the overlay with a box shadow.
     z-index: 10000;
     position: fixed;
     width: 100%;
-     Default
-     Center the dialog
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
